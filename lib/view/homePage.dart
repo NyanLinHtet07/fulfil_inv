@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fulfil_inv/view/components/NavigationPage.dart';
 
 class howmPage extends StatefulWidget {
   howmPage({Key? key}) : super(key: key);
@@ -11,17 +12,38 @@ class _howmPageState extends State<howmPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const navigationPage(),
       appBar: AppBar(
-        elevation: 1,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.dehaze),
-        ),
-        title: Text("FulFil"),
+        elevation: 5,
+        // leading: IconButton(
+        //   onPressed: () {},
+        //   icon: const Icon(
+        //     Icons.dehaze,
+        //     color: Colors.white,
+        //     size: 25,
+        //   ),
+        // ),
+        title: const Text("FulFil",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+            )),
         actions: [
           IconButton(
-              onPressed: () {}, icon: Icon(Icons.shopping_cart_outlined)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.person_outline)),
+              onPressed: () {},
+              icon: const Icon(
+                Icons.shopping_cart_outlined,
+                color: Colors.white,
+                size: 22,
+              )),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.notifications_outlined,
+                color: Colors.white,
+                size: 22,
+              )),
         ],
       ),
     );
